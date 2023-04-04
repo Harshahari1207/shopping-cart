@@ -1,11 +1,28 @@
-
-import './App.css';
+import "./App.css";
+import React from "react";
+import Nav from "./components/Nav";
+import Contact from "./components/Contact";
+import Shop from "./components/Shop";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Shopping Cart</h1>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        {/* <Routes>
+          <Route path="/" Component={<Home />} />
+          <Route path="/shop" Component={<Shop />} />
+          <Route path="/contact" Component={<Contact />} />
+        </Routes> */}
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/shop" Component={Shop} />
+          <Route path="/contact" Component={Contact} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
