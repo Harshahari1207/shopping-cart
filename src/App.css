@@ -7,12 +7,24 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: aquamarine;
-  height: 10vh;
+  height: 20vh;
 }
 
-.nav ul{
+.nav-links{
   display: flex;
   justify-content: space-evenly;
   gap: 100px;
   list-style: none;
+}
+
+#logo{
+  display: flex;
+}
+
+#logoImg{
+  width: 50px;
+}
+
+#footer{
+  bottom: 0;
 }
