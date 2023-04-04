@@ -11,13 +11,8 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-        {/* <Routes>
-          <Route path="/" Component={<Home />} />
-          <Route path="/shop" Component={<Shop />} />
-          <Route path="/contact" Component={<Contact />} />
-        </Routes> */}
         <Routes>
-          <Route path="/" Component={Home} />
+          <Route path="/" exact Component={Home} />
           <Route path="/shop" Component={Shop} />
           <Route path="/contact" Component={Contact} />
         </Routes>
