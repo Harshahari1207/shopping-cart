@@ -1,6 +1,6 @@
-import Cart from "./Cart";
 import { Link } from "react-router-dom";
 import crocsLogo from "../img/crocsLogo.svg";
+import cartLogo from "../img/cart.svg";
 const Nav = () => {
   return (
     <div className="nav">
@@ -19,7 +19,9 @@ const Nav = () => {
           <li>Contact</li>
         </Link>
       </ul>
-      <Cart />
+      <Link to="/cart">
+        <img id="cartLogo" src={cartLogo} alt="" />
+      </Link>
     </div>
   );
 };

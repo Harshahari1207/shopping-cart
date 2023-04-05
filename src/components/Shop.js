@@ -1,5 +1,7 @@
 import { useState } from "react";
 import uniqid from "uniqid";
+import { useContext } from "react";
+import { CartContext } from "./CartProvider";
 import crocs1 from "../img/crocs1.png";
 import crocs2 from "../img/crocs2.png";
 import crocs3 from "../img/crocs3.png";
@@ -9,7 +11,8 @@ import crocs6 from "../img/crocs6.png";
 import crocs7 from "../img/crocs7.png";
 import crocs8 from "../img/crocs8.png";
 const Shop = () => {
-  const [cards, setCard] = useState([
+  const {addToCart} = useContext(CartContext)
+  const [cards] = useState([
     {
       id: uniqid(),
       imgsrc: crocs1,
@@ -59,6 +62,9 @@ const Shop = () => {
       description: "Mellow Marbled Mushroom/Cobblestone Unisex Slide",
     },
   ]);
+  const handleAddToCart = (product)=>{
+    addToCart(product);
+  }
   return (
     <div id="shop">
       {cards.map((card) => {
@@ -67,7 +73,9 @@ const Shop = () => {
             <img src={card.imgsrc} alt="" />
             <p>{card.description} </p>
             <p className="price"> ₹ {card.price} </p>
-            <button>Add to Cart</button>
+            <button type="button" onClick={() => handleAddToCart(card)}>
+              Add to Cart
+            </button>
           </div>
         );
       })}

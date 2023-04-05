@@ -38,6 +38,9 @@
   font-size: 25px;
   color: var(--white);
 }
+#cartLogo {
+  width: 50px;
+}
 
 #logo {
   display: flex;
@@ -46,9 +49,14 @@
 #logoImg {
   width: 50px;
 }
+#homeDiv,
+#shop,
+#contact,
+#cart {
+  grid-row: 2/3;
+}
 
 #homeDiv {
-  grid-row: 2/3;
   background-color: var(--secondary-color);
   display: grid;
   height: 75vh;
@@ -92,7 +100,6 @@
 }
 
 #shop {
-  grid-row: 2/3;
   background-color: var(--light-grey-white);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -116,7 +123,7 @@
   background-color: var(--primary-color);
   border: 0;
   border-radius: var(--br);
-  padding: calc(var(--pd)*2);
+  padding: calc(var(--pd) * 2);
 }
 .cardDiv button:hover {
   background-color: var(--dark-primary-color);

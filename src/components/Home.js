@@ -2,6 +2,7 @@ import video from "../img/crocsShort.mp4";
 
 import { Link } from "react-router-dom";
 const Home = () => {
+  console.log("Home");
   return (
     <div id="homeDiv">
       <div id="homeLeft">
