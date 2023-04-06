@@ -1,8 +1,51 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CartContext } from "./CartProvider";
+import totalPrice from "./totalPrice";
+
+const CartItem = ({ item, decrement, increment }) => {
+  return (
+    <div id="cartDiv" className="cardDiv" key={item.id}>
+      <img className="image" src={item.imgsrc} alt="" />
+      <h4>{item.description}</h4>
+      <p>₹ {item.price} </p>
+      <div className="incrDecrBut">
+        <button onClick={() => decrement(item)}>➖</button>
+        <p id="quantity">{item.quantity}</p>
+        <button onClick={() => increment(item)}>➕</button>
+      </div>
+    </div>
+  );
+};
+
 const Cart = () => {
-  console.log("cartItems");
-  const { cartItems } = useContext(CartContext);
+  const [cartItems, setCartItems] = useState([]);
+  const { cartItems: contextCartItems } = useContext(CartContext);
+
+  useEffect(() => {
+    setCartItems(contextCartItems);
+  }, [contextCartItems]);
+
+  const [total, setTotal] = useState(0);
+  useEffect(() => {
+    setTotal(totalPrice(cartItems));
+  }, [cartItems]);
+
+  const decrement = (item) => {
+    if (item.quantity > 1) {
+      item.quantity--;
+    } else {
+      setCartItems((prevCartItems) =>
+        prevCartItems.filter((cartItem) => cartItem.id !== item.id)
+      );
+    }
+    setTotal(totalPrice(cartItems));
+  };
+
+  const increment = (item) => {
+    item.quantity++;
+    setTotal(totalPrice(cartItems));
+  };
+
   console.log(cartItems);
   return (
     <div id="cart">
@@ -10,43 +53,25 @@ const Cart = () => {
         <h1>Your Cart Items</h1>
         <div className="cartItem">
           {cartItems.map((item) => (
-            <div id="cartDiv" className="cardDiv" key={item.id}>
-              <img className="image" src={item.imgsrc} alt="" />
-              <h4>{item.description}</h4>
-              <p>{item.price} </p>
-              <div className="incrDecrBut">
-                <button>➖</button>
-                <p>{item.quantity}</p>
-                <button>➕</button>
-              </div>
-            </div>
+            <CartItem
+              key={item.id}
+              item={item}
+              decrement={decrement}
+              increment={increment}
+            />
           ))}
         </div>
       </div>
 
       <div className="cartRight">
-        <h3>Total</h3>
-        <div className="buttons">
-          <button>Checkout</button>
-          <button>Close</button>
+        <div className="cartRightItems">
+          <h3>Total</h3>
+          <p>₹ {total} </p>
+          <div className="buttons">
+            <button>Checkout</button>
+            <button>Close</button>
+          </div>
         </div>
-        {/* <div className="cartItems">
-          {cartItems.map((card) => {
-            return (
-              <div className="cardDiv" key={card.id}>
-                <img src={card.imgsrc} alt="" />
-                <p>{card.description} </p>
-                <p className="price"> ₹ {card.price} </p>
-                <div>
-                  
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <h2></h2>
-        <button>Checkout</button>
-        <button>Close</button> */}
       </div>
     </div>
   );
