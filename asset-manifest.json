@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.d36f2d92.css",
+    "main.js": "/shopping-cart/static/js/main.5aa45889.js",
+    "static/media/crocsShort.mp4": "/shopping-cart/static/media/crocsShort.fd7f5b5776ea74d3eb11.mp4",
+    "static/media/crocs4.png": "/shopping-cart/static/media/crocs4.5ae373089cec24d154d0.png",
+    "static/media/crocs6.png": "/shopping-cart/static/media/crocs6.3bd0779d090725650cf9.png",
+    "static/media/crocs2.png": "/shopping-cart/static/media/crocs2.5b8452351c5a1b23dc06.png",
+    "static/media/crocs1.png": "/shopping-cart/static/media/crocs1.dcd30c88efc040c276f3.png",
+    "static/media/crocs5.png": "/shopping-cart/static/media/crocs5.1284fb815615ee75131b.png",
+    "static/media/crocs7.png": "/shopping-cart/static/media/crocs7.44ad7d27377c8467b2a6.png",
+    "static/media/crocs3.png": "/shopping-cart/static/media/crocs3.492ac0e132b97da5942c.png",
+    "static/media/crocs8.png": "/shopping-cart/static/media/crocs8.4ed755aa105945ba52af.png",
+    "static/media/crocsLogo.svg": "/shopping-cart/static/media/crocsLogo.bdb88634186fba267af00d6af219100b.svg",
+    "static/media/cart.svg": "/shopping-cart/static/media/cart.99af1c192589ee4f46db9535fbbceb1d.svg",
+    "index.html": "/shopping-cart/index.html",
+    "main.d36f2d92.css.map": "/shopping-cart/static/css/main.d36f2d92.css.map",
+    "main.5aa45889.js.map": "/shopping-cart/static/js/main.5aa45889.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d36f2d92.css",
+    "static/js/main.5aa45889.js"
+  ]
+}
