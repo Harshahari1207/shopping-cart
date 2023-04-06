@@ -3,6 +3,7 @@
   --primary-color: #579bb1;
   --secondary-color: #e1d7c6;
   --light-grey-white: #ece8dd;
+  --cart-background-color: #867070;
   --white: #f6f5f4;
   --pd: 5px;
   --br: 5px;
@@ -114,8 +115,8 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border-radius: var(--br);
 }
-.cardDiv img {
-  width: 200px;
+.image {
+  width: 150px;
   height: 150px;
 }
 .cardDiv button {
@@ -127,6 +128,61 @@
 }
 .cardDiv button:hover {
   background-color: var(--dark-primary-color);
+}
+#cart {
+  min-height: 75vh;
+  display: grid;
+  grid-template-columns: 70vw 30vw;
+  background-color: var(--light-grey-white);
+}
+.cartLeft {
+  grid-column: 1/2;
+  
+}
+.cartItem{
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--gap)*5);
+  padding: calc(var(--pd)*5);
+ 
+  
+}
+.incrDecrBut{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--gap)*3);
+}
+#cartDiv .incrDecrBut button{
+  width: 50px;
+  font-size: 15px;
+}
+#cartDiv .incrDecrBut p{
+  font-size: 20px;
+}
+.cartRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2/3;
+}
+#cart button {
+  width: 150px;
+  font-size: 20px;
+  padding: var(--pd);
+  border-radius: var(--br);
+  border: 0;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+#cart button:hover {
+  background-color: var(--dark-primary-color);
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap) * 5);
 }
 #footer {
   position: relative;

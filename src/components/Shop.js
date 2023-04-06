@@ -11,7 +11,7 @@ import crocs6 from "../img/crocs6.png";
 import crocs7 from "../img/crocs7.png";
 import crocs8 from "../img/crocs8.png";
 const Shop = () => {
-  const {addToCart} = useContext(CartContext)
+  const { addToCart } = useContext(CartContext);
   const [cards] = useState([
     {
       id: uniqid(),
@@ -62,15 +62,15 @@ const Shop = () => {
       description: "Mellow Marbled Mushroom/Cobblestone Unisex Slide",
     },
   ]);
-  const handleAddToCart = (product)=>{
+  const handleAddToCart = (product) => {
     addToCart(product);
-  }
+  };
   return (
     <div id="shop">
       {cards.map((card) => {
         return (
           <div className="cardDiv" key={card.id}>
-            <img src={card.imgsrc} alt="" />
+            <img className="image" src={card.imgsrc} alt="" />
             <p>{card.description} </p>
             <p className="price"> ₹ {card.price} </p>
             <button type="button" onClick={() => handleAddToCart(card)}>
