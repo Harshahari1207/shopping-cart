@@ -9,18 +9,18 @@ const Nav = () => {
         <h1>Fake Crocs Store</h1>
       </div>
       <ul className="nav-links">
-        <Link to="/">
+        <Link to="shopping-cart/">
           <li>Home</li>
         </Link>
-        <Link to="/shop">
+        <Link to="shopping-cart/shop">
           <li>Shop</li>
         </Link>
-        <Link to="/contact">
+        <Link to="shopping-cart/contact">
           <li>Contact</li>
         </Link>
       </ul>
       <div className="cartMain">
-        <Link to="/cart">
+        <Link to="shopping-cart/cart">
           <img id="cartLogo" src={cartLogo} alt="" />
         </Link>
       </div>

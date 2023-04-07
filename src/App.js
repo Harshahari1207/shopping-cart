@@ -17,10 +17,10 @@ function App() {
 
         <CartProvider>
           <Routes>
-            <Route path="/" exact Component={Home} />
-            <Route path="/contact" Component={Contact} />
-            <Route path="/shop" Component={Shop} />
-            <Route path="/cart" Component={Cart} />
+            <Route path="shopping-cart/" exact Component={Home} />
+            <Route path="shopping-cart/contact" Component={Contact} />
+            <Route path="shopping-cart/shop" Component={Shop} />
+            <Route path="shopping-cart/cart" Component={Cart} />
           </Routes>
         </CartProvider>
         <Footer />
