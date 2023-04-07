@@ -19,9 +19,11 @@ const Nav = () => {
           <li>Contact</li>
         </Link>
       </ul>
-      <Link to="/cart">
-        <img id="cartLogo" src={cartLogo} alt="" />
-      </Link>
+      <div className="cartMain">
+        <Link to="/cart">
+          <img id="cartLogo" src={cartLogo} alt="" />
+        </Link>
+      </div>
     </div>
   );
 };

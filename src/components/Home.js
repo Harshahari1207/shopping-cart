@@ -13,6 +13,11 @@ const Home = () => {
           <Link to="/shop">
             <button type="button">Shop Now</button>
           </Link>
+          <p>
+            Copy rights of Crocs Video and Images are from Official{" "}
+            <a href="https://www.crocs.in/">Crocs website</a> . And Logos from{" "}
+            <a href="https://icons8.com/">icons8</a> Website
+          </p>
         </div>
       </div>
       <div id="homeRight">

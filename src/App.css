@@ -3,7 +3,7 @@
   --primary-color: #579bb1;
   --secondary-color: #e1d7c6;
   --light-grey-white: #ece8dd;
-  --cart-background-color: #867070;
+  --contact-background-color: #867070;
   --white: #f6f5f4;
   --pd: 5px;
   --br: 5px;
@@ -31,7 +31,7 @@
 .nav-links {
   display: flex;
   justify-content: space-evenly;
-  gap: 100px;
+  gap: calc(var(--gap)*10);
   list-style: none;
   color: var(--white);
 }
@@ -39,9 +39,16 @@
   font-size: 25px;
   color: var(--white);
 }
+.cartMain{
+  min-width: 100px;
+}
 #cartLogo {
   width: 50px;
 }
+#cartLogo:hover{
+  width: 70px;
+}
+
 
 #logo {
   display: flex;
@@ -94,6 +101,7 @@
   justify-content: center;
   align-items: center;
   padding: calc(var(--pd) * 15);
+  color: var(--white);
 }
 #homeRight {
   grid-column: 2/3;
@@ -192,6 +200,32 @@
   display: flex;
   flex-direction: column;
   gap: calc(var(--gap) * 5);
+}
+
+#contact{
+  background-color: var(--contact-background-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 75vh;
+  color: var(--white);
+  gap: calc(var(--gap)*3);
+}
+.contactElements{
+  padding: calc(var(--pd)*4);
+  display: flex;
+  gap: calc(var(--gap)*10);
+  align-items: center;
+  justify-content: center;
+}
+.contactElements .aLink{
+  min-width: 200px;
+  min-height: 300px;
+}
+.contactElements img{
+  width: 150px;
+}
+.contactElements img:hover{
+  width: 160px;
 }
 #footer {
   position: relative;
