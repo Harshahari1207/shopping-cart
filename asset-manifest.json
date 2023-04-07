@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.d36f2d92.css",
-    "main.js": "/shopping-cart/static/js/main.5aa45889.js",
+    "main.css": "/shopping-cart/static/css/main.66c5b8c1.css",
+    "main.js": "/shopping-cart/static/js/main.6b74e56e.js",
     "static/media/crocsShort.mp4": "/shopping-cart/static/media/crocsShort.fd7f5b5776ea74d3eb11.mp4",
     "static/media/crocs4.png": "/shopping-cart/static/media/crocs4.5ae373089cec24d154d0.png",
     "static/media/crocs6.png": "/shopping-cart/static/media/crocs6.3bd0779d090725650cf9.png",
@@ -13,12 +13,15 @@
     "static/media/crocs8.png": "/shopping-cart/static/media/crocs8.4ed755aa105945ba52af.png",
     "static/media/crocsLogo.svg": "/shopping-cart/static/media/crocsLogo.bdb88634186fba267af00d6af219100b.svg",
     "static/media/cart.svg": "/shopping-cart/static/media/cart.99af1c192589ee4f46db9535fbbceb1d.svg",
+    "static/media/icons8-github.svg": "/shopping-cart/static/media/icons8-github.338d83ea24d46b0f3524f42449486f9b.svg",
     "index.html": "/shopping-cart/index.html",
-    "main.d36f2d92.css.map": "/shopping-cart/static/css/main.d36f2d92.css.map",
-    "main.5aa45889.js.map": "/shopping-cart/static/js/main.5aa45889.js.map"
+    "static/media/icons8-linkedin.svg": "/shopping-cart/static/media/icons8-linkedin.014d77f6f1412c4e580441d92268466b.svg",
+    "static/media/icons8-facebook.svg": "/shopping-cart/static/media/icons8-facebook.1fc810a8e15c60ec41d7d0586cb4c1d5.svg",
+    "main.66c5b8c1.css.map": "/shopping-cart/static/css/main.66c5b8c1.css.map",
+    "main.6b74e56e.js.map": "/shopping-cart/static/js/main.6b74e56e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d36f2d92.css",
-    "static/js/main.5aa45889.js"
+    "static/css/main.66c5b8c1.css",
+    "static/js/main.6b74e56e.js"
   ]
 }
