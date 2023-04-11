@@ -34,10 +34,15 @@
   gap: calc(var(--gap)*10);
   list-style: none;
   color: var(--white);
+  
+}
+.nav-links a{
+  text-decoration: none;
 }
 .nav-links li {
   font-size: 25px;
   color: var(--white);
+  
 }
 .cartMain{
   min-width: 100px;
