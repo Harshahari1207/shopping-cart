@@ -232,6 +232,11 @@
 .contactElements img:hover{
   width: 160px;
 }
+.navElement{
+  width: 100%;
+  padding: var(--pd);
+  border-radius: var(--br);
+}
 #footer {
   position: relative;
   bottom: 0;
