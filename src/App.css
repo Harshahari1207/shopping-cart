@@ -1,15 +1,35 @@
 * {
   --dark-primary-color: #417e93;
-  --primary-color: #579bb1;
-  --secondary-color: #e1d7c6;
+  /* --secondary-color: #e1d7c6; */
+  /* --contact-background-color: #867070; */
+  --logoBack: #CBEDD5;
+  /* --primary-color: #579bb1;
   --light-grey-white: #ece8dd;
-  --contact-background-color: #867070;
   --white: #f6f5f4;
+  --font-color: rgb(22, 22, 22); */
   --pd: 5px;
   --br: 5px;
   --gap: 5px;
 }
-
+.lightMode{
+  --primary-color: #579bb1;
+  --light-grey-white: #ece8dd;
+  --white: #f6f5f4;
+  --font-color: rgb(22, 22, 22);
+  --secondary-color: #e1d7c6;
+  --contact-background-color: #867070;
+}
+.darkMode{
+  --primary-color: #262A56;
+  --light-grey-white: rgb(22, 22, 22);
+  --white:  rgb(74, 60, 60);
+  --font-color: rgb(223, 223, 126);
+  --secondary-color: #0A2647;
+  --contact-background-color: #282A3A;
+}
+h1, h2, h3, p, button{
+  color: var(--font-color);
+}
 .App {
   text-align: center;
   display: grid;
@@ -28,7 +48,7 @@ button:hover {
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--primary-color);
-  color: var(--white);
+  color: var(--font-color);
   height: 15vh;
 }
 
@@ -37,14 +57,31 @@ button:hover {
   justify-content: space-evenly;
   gap: calc(var(--gap) * 10);
   list-style: none;
-  color: var(--white);
+  color: var(--font-color);
 }
 .nav-links a {
   text-decoration: none;
 }
 .nav-links li {
   font-size: 25px;
-  color: var(--white);
+  color: var(--font-color);
+}
+.darkLogo {
+  animation: one-by-one 0.7s ease-in 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--logoBack);
+}
+.darkLogo:hover {
+  cursor: pointer;
+}
+.darkLogo img {
+  width: 70%;
+  height: 70%;
 }
 .cartMain {
   min-width: 100px;
@@ -91,7 +128,7 @@ button:hover {
   width: 150px;
   height: 65px;
   font-size: 20px;
-  color: var(--white);
+  color: var(--font-color);
   background-color: var(--primary-color);
   border: 0;
   border-radius: 20%;
@@ -107,7 +144,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   padding: calc(var(--pd) * 15);
-  color: var(--white);
+  color: var(--font-color);
 }
 #homeRight {
   grid-column: 2/3;
@@ -139,7 +176,7 @@ button:hover {
   height: 150px;
 }
 .cardDiv button {
-  color: var(--white);
+  color: var(--font-color);
   background-color: var(--primary-color);
   border: 0;
   border-radius: var(--br);
@@ -213,7 +250,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   min-height: 75vh;
-  color: var(--white);
+  color: var(--font-color);
   gap: calc(var(--gap) * 3);
 }
 .contactElements {
@@ -224,14 +261,20 @@ button:hover {
   justify-content: center;
 }
 .contactElements .aLink {
-  min-width: 200px;
-  min-height: 300px;
+  border-radius: 50%;
+  background-color: var(--logoBack);
+  min-width: 150px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
 }
 .contactElements img {
-  width: 150px;
+  width: 100px;
 }
 .contactElements img:hover {
-  width: 160px;
+  width: 120px;
 }
 .navElement {
   width: 100%;
