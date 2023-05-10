@@ -41,6 +41,8 @@ button:hover {
 
 /* Nav Bar */
 .nav {
+
+  
   position: fixed;
   grid-row: 1/2;
   display: flex;
@@ -84,13 +86,15 @@ button:hover {
   height: 70%;
 }
 .cartMain {
-  min-width: 100px;
+  width: 100px;
+  background-color: var(--logoBack);
+  border-radius: 50%;
 }
 #cartLogo {
-  width: 50px;
+  width: 50%;
 }
 #cartLogo:hover {
-  width: 70px;
+  width: 60px;
 }
 
 #logo {

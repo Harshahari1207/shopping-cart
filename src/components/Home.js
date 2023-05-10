@@ -10,7 +10,7 @@ const Home = () => {
           <h1>GREEN COMES IN EVERY COLOR</h1>
 
           <h3>Half the carbon footprint by 2030</h3>
-          <Link to="/shop">
+          <Link to="../shopping-cart/shop">
             <button type="button">Shop Now</button>
           </Link>
           <p>
