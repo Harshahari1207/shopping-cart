@@ -2,6 +2,7 @@ import { useState } from "react";
 import uniqid from "uniqid";
 import { useContext } from "react";
 import { CartContext } from "./CartProvider";
+
 import crocs1 from "../img/crocs1.png";
 import crocs2 from "../img/crocs2.png";
 import crocs3 from "../img/crocs3.png";
@@ -12,6 +13,7 @@ import crocs7 from "../img/crocs7.png";
 import crocs8 from "../img/crocs8.png";
 const Shop = () => {
   const { addToCart } = useContext(CartContext);
+
   const [cards] = useState([
     {
       id: uniqid(),
@@ -63,6 +65,7 @@ const Shop = () => {
     },
   ]);
   const handleAddToCart = (product) => {
+    console.log("pressed Add to cart")
     addToCart(product);
   };
   return (
